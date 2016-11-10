@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Javascript Neural Network</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+/**
+* Created by Nicholas Porter on 8/16/16.*/
+<br>
+<h1>JavaScript: Neural Network: Back-Propagation</h1>
+<h3>The sigmoid eqaution is usually used as a transfer/activation function between neurons</h3>
+<br>
+Sigmoid fn : x = 1/(1+e^-x)<br>
+<br>
+//  e = Euler's number<br>
+//in javascript Math.E is euler's number<br>
+//  e = Math.E<br>
+<br>
+<h3>Derivation of sigmoid fn </h3>
+ d/dx θ (x) = d/dx(1/(1+e^-x))<br>
+<br>
+<h4>Using quotient rule</h4><br>
+    = (e^x)/(1+e^-x)^2<br>
+<br>
+<h4>next add and subtract one to group numerator and denominator nicely</h4><br>
+   = ((1+ e^-x)-1)/(1+e^-x)^2<br>
+<br>
+<h4>Now we can split it into two different fractions</h4><br>
+<h4>the first fraction is nice because the top and bottom will cancel</h4><br>
+ = ((1+ e ^-x)/(1+ e^-x)) - (1/ (1+e^-x)^2)<br>
+<br>
+<h4>the first term will cancel out and be sigma(θ) and the second will be sigma(θ) x^2</h4></br>
+ = θ(x) - θ(x)^2<br>
+<br>
+<h4>now we can factor and get sigma prime</h4><br>
+ = θ(1- θ)<br>
+<br>
 
+<h2>-----given a single input neuron----</h2><br>
+<h4> ε =input to neuron, w= weight of connection, sigma = transfer fn, o = output, theta = bias node</h4>
+<h5> Bias node is added to the product of the weight and the input</h5>
+<br>
+<br>
+ //   w<br>
+//ε ----->  θ -----> o<br>
+
+//       bias node = theta<br>
+<br>
+//Here is the equation that defines the output of the neuron<br>
+
+//o = θ(εw + theta)<br>
+<br>
+<br>
+//There can be mulitple input unodes, hidden nodes, and outputs. Together they make up layers.<br>
+// I : Input Layer, J: Hidden Layer, K: Output Layer<br>
+<br>
 </body>
 </html>
