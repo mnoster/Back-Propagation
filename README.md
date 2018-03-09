@@ -1,5 +1,3 @@
-/**
- * Created by njporter10 on 8/16/16.  */
 
 # Back-Propagation
 
